@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 function Header(){
     return(<div>
         <h1>
-            Reactjs
+            Reactjs tutorial
             </h1>
         </div>)
 }
