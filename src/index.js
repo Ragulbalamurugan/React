@@ -1,15 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 
-function Header(){
+// ReactHook
+function ReactHooks(){
+    const[count,updatecount] =useState(0);
+    useEffect(()=>{
+        alert("hello react js")
+    })
     return(
         <div>
-            <h1>
-                react is library in javascript which
-                was created by faccebook and it is 
-                runing successful today
-            </h1>
+            <p>
+                you clicked the below button {count} times
+            </p>
+            <button onClick={()=> updatecount(count + 1)}>click
+             </button>
         </div>
     )
 }
-ReactDOM.render(<Header/>,document.getElementById('root'))
+ReactDOM.render(<ReactHooks/>,document.getElementById('root'));
